@@ -1,0 +1,16 @@
+/*! @preserve
+ * Copyright (c) 2019 Aquafortis
+ * Licensed under MPL-2.0 (https://github.com/Aquafortis/legible-lincoln)
+ */
+.product-listing .column {
+    padding: 0.9375rem;
+    border: 1px solid #abc;
+}
+
+.orbit-container {
+    border: 1px solid #abc;
+}
+
+button.scroll {
+    display: none;
+}

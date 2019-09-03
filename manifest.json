@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Legible (Lincoln)",
+    "version": "1.4",
+    "description": "Making the Lincoln website legible.",
+    "icons": {
+        "48": "icons/icon.png",
+        "96": "icons/icon@2x.png"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "storage"
+    ],
+    "content_scripts": [{
+        "all_frames": true,
+        "matches": ["*://*.lincolnsentry.com.au/*"],
+        "css": ["content/legible.css"],
+        "js": ["content/legible.js"]
+    }],
+    "options_ui": {
+        "browser_style": true,
+        "page": "options/options.html"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "legible-lincoln@aquafortis"
+        }
+    }
+}
