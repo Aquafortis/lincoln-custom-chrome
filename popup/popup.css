@@ -1,0 +1,11 @@
+/*! @preserve
+ * Copyright (c) 2019 Aquafortis
+ * Licensed under MPL-2.0 (https://github.com/Aquafortis/lincoln-custom-chrome)
+ */
+html, body {
+    width: 300px;
+}
+
+.custom-button {
+    margin-top: 10px;
+}

@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Legible (Lincoln)",
-    "version": "1.4",
-    "description": "Making the Lincoln website legible.",
+    "name": "Lincoln Custom",
+    "version": "1.5",
+    "description": "Making the Lincoln website better.",
     "icons": {
         "48": "icons/icon.png",
         "96": "icons/icon@2x.png"
@@ -15,16 +15,16 @@
     "content_scripts": [{
         "all_frames": true,
         "matches": ["*://*.lincolnsentry.com.au/*"],
-        "css": ["content/legible.css"],
-        "js": ["content/legible.js"]
+        "css": ["content/custom.css"],
+        "js": ["content/custom.js"]
     }],
-    "options_ui": {
-        "browser_style": true,
-        "page": "options/options.html"
-    },
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "legible-lincoln@aquafortis"
+    "browser_action": {
+        "default_title": "Lincoln",
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/down-16.png",
+            "32": "icons/down-32.png",
+            "64": "icons/down-64.png"
         }
     }
 }

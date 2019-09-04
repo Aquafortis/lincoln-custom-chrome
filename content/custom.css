@@ -1,6 +1,6 @@
 /*! @preserve
  * Copyright (c) 2019 Aquafortis
- * Licensed under MPL-2.0 (https://github.com/Aquafortis/legible-lincoln)
+ * Licensed under MPL-2.0 (https://github.com/Aquafortis/lincoln-custom-chrome)
  */
 .product-listing .column {
     padding: 0.9375rem;
@@ -12,5 +12,6 @@
 }
 
 button.scroll {
-    display: none;
+    height: 40px;
+    width: 40px;
 }
