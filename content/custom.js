@@ -1,6 +1,6 @@
 /*! @preserve
  * Copyright (c) 2019 Aquafortis
- * Licensed under MPL-2.0 (https://github.com/Aquafortis/lincoln-custom-chrome)
+ * Licensed under MPL-2.0 (https://github.com/Aquafortis/lincoln-custom)
  */
 const website = location.href;
 const sitemap = "lincolnsentry.com.au/search/products/sitemap";

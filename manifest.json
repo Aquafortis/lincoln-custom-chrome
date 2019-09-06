@@ -1,14 +1,13 @@
 {
     "manifest_version": 2,
     "name": "Lincoln Custom",
-    "version": "1.5",
-    "description": "Making the Lincoln website better.",
+    "version": "1.6",
+    "description": "Making the Lincoln website even better.",
     "icons": {
         "48": "icons/icon.png",
         "96": "icons/icon@2x.png"
     },
     "permissions": [
-        "activeTab",
         "tabs",
         "storage"
     ],
@@ -22,9 +21,9 @@
         "default_title": "Lincoln",
         "default_popup": "popup/popup.html",
         "default_icon": {
-            "16": "icons/down-16.png",
-            "32": "icons/down-32.png",
-            "64": "icons/down-64.png"
+            "16": "icons/read-16.png",
+            "32": "icons/read-32.png",
+            "64": "icons/read-64.png"
         }
     }
 }

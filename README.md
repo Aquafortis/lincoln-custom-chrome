@@ -1,6 +1,6 @@
 # Lincoln Custom
 ## Chrome Extension
-### Making the Lincoln website better
+### Making the Lincoln website even better
 
 This Extension will make the Lincoln website easier to read.
 
