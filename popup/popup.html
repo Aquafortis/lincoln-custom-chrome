@@ -10,28 +10,19 @@
 <body>
 
     <header class="panel-section panel-section-header">
-        <div class="text-section-header">Lincoln Custom</div>
         <div class="icon-section-header">
+            <img id="home" src="../icons/home-32.png" title="Home" alt="Home">
+        </div>
+        <div class="text-section-header">Lincoln Sentry</div>
+        <div class="icon-section-header sitemap">
             <img id="sitemap" src="../icons/read-32.png" title="Sitemap" alt="Sitemap">
+        </div>
+        <div class="icon-section-header">
+            <img id="widget" value="Show" src="../icons/chat-on-32.png" title="Chat On/Off" alt="Chat On/Off">
         </div>
     </header>
 
-    <div class="browser-style">
-        <div class="panel-section panel-section-formElements">
-            <form>
-                <p>Show/Hide Chat Widget</p>
-                <div class="panel-formElements-item">
-                    <label for="widget">Chat Widget:</label>
-                    <select id="widget">
-                        <option value="Show" selected="true">Show</option>
-                        <option value="Hide">Hide</option>
-                    </select>
-                </div>
-                <button class="browser-style" type="submit">Save</button>
-            </form>
-            <p>Refresh page to see changes.</p>
-        </div>
-    </div>
+    <iframe id="latest" style="border:none;height:480px;"></iframe>
 
     <script src="popup.js"></script>
 

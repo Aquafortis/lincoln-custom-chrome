@@ -3,15 +3,16 @@
  * Licensed under MPL-2.0 (https://github.com/Aquafortis/lincoln-custom)
  */
 html, body {
-    width: 300px;
-}
-
-.icon-section-header {
-    padding-left: 30px;
+    width: 330px;
 }
 
 .icon-section-header img {
     cursor: pointer;
+}
+
+.sitemap {
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 /* stylelint-disable property-no-vendor-prefix */
@@ -385,7 +386,8 @@ textarea.browser-style:invalid:not(:focus) {
 
 .panel-section-header>.text-section-header {
     align-self: center;
-    font-size: 1.385em;
+    /*font-size: 1.385em;*/
+    font-size: 1.2em;
     font-weight: lighter;
 }
 

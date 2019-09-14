@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Lincoln Custom",
-    "version": "1.6",
+    "version": "1.7",
     "description": "Making the Lincoln website even better.",
     "icons": {
         "48": "icons/icon.png",
