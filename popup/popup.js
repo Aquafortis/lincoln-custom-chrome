@@ -10,21 +10,35 @@ function saveOptions(e) {
     if (chat.value == "Show") {
         chat.value = "Hide";
         chat.setAttribute("src", "../icons/chat-off-32.png");
+        state = "../icons/chat-off-32.png";
     } else {
         chat.value = "Show";
         chat.setAttribute("src", "../icons/chat-on-32.png");
+        state = "../icons/chat-on-32.png";
     }
     chrome.storage.sync.set({
-        widget: chat.value
+        widget: chat.value,
+        status: state
     });
 }
 
 function restoreOptions() {
     let keys = [
-        "widget"
+        "widget",
+        "status"
     ];
     chrome.storage.sync.get(keys, function(res) {
         chat.value = res.widget || "Show";
+        status = res.status || "../icons/chat-on-32.png";
+    });
+    chrome.storage.sync.get(["status"], function(res) {
+        let status = "../icons/chat-on-32.png";
+        if (res.status) {
+            status = res.status;
+        }
+        if (status == "../icons/chat-off-32.png") {
+            chat.setAttribute("src", status);
+        }
     });
 }
 
