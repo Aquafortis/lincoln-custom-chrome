@@ -15,3 +15,7 @@ button.scroll {
     height: 35px;
     width: 35px;
 }
+
+.express-shop__item-image {
+    margin-right: 5px;
+}
