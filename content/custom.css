@@ -19,3 +19,9 @@ button.scroll {
 .express-shop__item-image {
     margin-right: 5px;
 }
+
+@media screen and (max-width: 766px) {
+    .brand-footer__social-sharing {
+        padding-top: 7px;
+    }
+}
