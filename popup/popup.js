@@ -60,10 +60,22 @@ function openSitemap() {
     }, 100);
 }
 
+function choice(random) {
+    let index = Math.floor(Math.random() * random.length);
+    return random[index];
+}
+
 function addFrame() {
     const frame = document.getElementById("latest");
-    frame.setAttribute("src",
-        "https://www.lincolnsentry.com.au/general-information/latest_releases");
+    let sources = [
+        "https://www.lincolnsentry.com.au/general-information/latest_releases",
+        "https://www.lincolnsentry.com.au/general-information/promotions",
+        "https://www.lincolnsentry.com.au/general-information/news-events",
+        "https://www.lincolnsentry.com.au/go-rewards"
+    ];
+    let source = choice(sources);
+
+    frame.setAttribute("src", source);
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
