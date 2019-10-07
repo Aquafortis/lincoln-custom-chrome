@@ -4,25 +4,28 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="popup.css" />
 </head>
 
 <body>
 
-    <header class="panel-section panel-section-header">
-        <div class="icon-section-header">
-            <img id="home" src="../icons/home-32.png" title="Home" alt="Home">
-        </div>
-        <div class="text-section-header">Lincoln Sentry</div>
-        <div class="icon-section-header sitemap">
-            <img id="sitemap" src="../icons/read-32.png" title="Sitemap" alt="Sitemap">
-        </div>
-        <div class="icon-section-header">
-            <img id="widget" value="Show" src="../icons/chat-on-32.png" title="Chat On/Off" alt="Chat On/Off">
+    <header class="aqua-flex-header">
+        <div class="aqua-flex-container">
+            <div class="first">
+                <img id="home" src="../icons/home-64.png" title="Home">
+            </div>
+            <div class="other">Lincoln Sentry</div>
+            <div class="other">
+                <img id="sitemap" src="../icons/icon-64.png" title="Sitemap">
+            </div>
+            <div class="other">
+                <img id="widget" value="Show" src="../icons/chat-on-64.png" title="Chat On/Off">
+            </div>
         </div>
     </header>
 
-    <iframe id="latest" style="border:none;height:500px;"></iframe>
+    <iframe id="frame"></iframe>
 
     <script src="popup.js"></script>
 

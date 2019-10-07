@@ -3,41 +3,33 @@
  * Licensed under MPL-2.0 (https://github.com/Aquafortis/lincoln-custom)
  */
 const chat = document.getElementById("widget");
+const chatOff = "../icons/chat-off-64.png";
+const chatOn = "../icons/chat-on-64.png";
 
 function saveOptions(e) {
     e.preventDefault();
 
     if (chat.value == "Show") {
         chat.value = "Hide";
-        chat.setAttribute("src", "../icons/chat-off-32.png");
-        state = "../icons/chat-off-32.png";
+        chat.setAttribute("src", chatOff);
+        localStorage.setItem("status", chatOff);
     } else {
         chat.value = "Show";
-        chat.setAttribute("src", "../icons/chat-on-32.png");
-        state = "../icons/chat-on-32.png";
+        chat.setAttribute("src", chatOn);
+        localStorage.setItem("status", chatOn);
     }
-    chrome.storage.sync.set({
-        widget: chat.value,
-        status: state
+    chrome.storage.local.set({
+        widget: chat.value
     });
 }
 
 function restoreOptions() {
-    let keys = [
-        "widget",
-        "status"
-    ];
-    chrome.storage.sync.get(keys, function(res) {
-        chat.value = res.widget || "Show";
-        status = res.status || "../icons/chat-on-32.png";
-    });
-    chrome.storage.sync.get(["status"], function(res) {
-        let status = "../icons/chat-on-32.png";
-        if (res.status) {
-            status = res.status;
-        }
-        if (status == "../icons/chat-off-32.png") {
-            chat.setAttribute("src", status);
+    chrome.storage.local.get(["widget"], function(data) {
+        let state = localStorage.getItem("status");
+        if (data.widget) {
+            chat.setAttribute("src", state);
+        } else {
+            chat.setAttribute("src", chatOn);
         }
     });
 }
@@ -46,7 +38,7 @@ function openHomepage() {
     chrome.tabs.update({
         url: "https://www.lincolnsentry.com.au/"
     });
-    setTimeout(function() {
+    setTimeout(() => {
         window.close();
     }, 100);
 }
@@ -55,7 +47,7 @@ function openSitemap() {
     chrome.tabs.update({
         url: "https://www.lincolnsentry.com.au/search/products/sitemap"
     });
-    setTimeout(function() {
+    setTimeout(() => {
         window.close();
     }, 100);
 }
@@ -66,15 +58,25 @@ function choice(random) {
 }
 
 function addFrame() {
-    const frame = document.getElementById("latest");
+    const frame = document.getElementById("frame");
     let sources = [
         "https://www.lincolnsentry.com.au/general-information/latest_releases",
         "https://www.lincolnsentry.com.au/general-information/promotions",
         "https://www.lincolnsentry.com.au/general-information/news-events",
         "https://www.lincolnsentry.com.au/go-rewards"
     ];
-    let source = choice(sources);
-
+    let array = sources;
+    let random = choice(array);
+    let name = localStorage.getItem("random");
+    let source = random;
+    if (random !== name) {
+        source = random;
+        localStorage.setItem("random", source);
+    } else {
+        array = array.filter(value => value !== name);
+        source = choice(array);
+        localStorage.setItem("random", source);
+    }
     frame.setAttribute("src", source);
 }
 

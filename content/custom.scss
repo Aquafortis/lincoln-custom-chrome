@@ -2,26 +2,27 @@
  * Copyright (c) 2019 Aquafortis
  * Licensed under MPL-2.0 (https://github.com/Aquafortis/lincoln-custom)
  */
+// Settings
+
 .product-listing .column {
-  padding: 0.9375rem;
-  border: 1px solid #abc;
+    padding: 0.9375rem;
+    border: 1px solid #abc;
 }
 
 .orbit-container {
-  border: 1px solid #abc;
+    border: 1px solid #abc;
 }
 
 button.scroll {
-  height: 35px;
-  width: 35px;
+    height: 35px;
+    width: 35px;
 }
 
 .express-shop__item-image {
-  margin-right: 5px;
+    margin-right: 5px;
 }
-
 @media screen and (max-width: 766px) {
-  .brand-footer__social-sharing {
-    padding-top: 7px;
-  }
+    .brand-footer__social-sharing {
+        padding-top: 7px;
+    }
 }

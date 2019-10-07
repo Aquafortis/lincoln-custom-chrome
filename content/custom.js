@@ -33,10 +33,10 @@ function setTargets() {
 function chatWidget() {
     "use strict";
 
-    chrome.storage.sync.get(["widget"], function(res) {
+    chrome.storage.local.get(["widget"], function(data) {
         let widget = "Show";
-        if (res.widget) {
-            widget = res.widget;
+        if (data.widget) {
+            widget = data.widget;
         }
         if (widget == "Hide") {
             document.getElementById("chat-widget-container")
