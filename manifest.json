@@ -2,12 +2,13 @@
     "manifest_version": 2,
     "name": "Lincoln Custom",
     "short_name": "Lincoln",
-    "version": "2.2",
+    "version": "2.3",
     "description": "Making the Lincoln website even better.",
     "icons": {
         "32": "icons/icon-32.png",
         "64": "icons/icon-64.png",
-        "128": "icons/icon-128.png"
+        "128": "icons/icon-128.png",
+        "256": "icons/icon-128@2x.png"
     },
     "permissions": [
         "storage"
