@@ -49,3 +49,9 @@ window.addEventListener("load", () => {
     setTargets();
     chatWidget();
 });
+
+// Fix for Firefox version 70.0
+if (website.substring(1).match(sitemap)) {
+    setTargets();
+    chatWidget();
+}

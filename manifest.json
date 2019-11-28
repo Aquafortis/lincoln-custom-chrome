@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Lincoln Custom",
     "short_name": "Lincoln",
-    "version": "2.3",
+    "version": "2.4",
     "description": "Making the Lincoln website even better.",
     "icons": {
         "32": "icons/icon-32.png",
